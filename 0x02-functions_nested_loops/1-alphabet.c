@@ -2,7 +2,7 @@
 /**
  * print_alphabet - a function that prints alphabet in lowercase
  *
- *Return: returns 0 when the program is executed successfully
+ * Return: returns 0 when the program is executed successfully
  */
 
 
