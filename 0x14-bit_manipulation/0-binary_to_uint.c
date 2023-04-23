@@ -1,17 +1,47 @@
 #include <stddef.h>
 #include "main.h"
 /**
- * binary_to_uint - this converts binary number to unsigned int
- * @b: binary number
- * Return: the converted number which is the unsigned int or 0
- */
+  * _stoi - for converting a chars to ints
+  * @c: char to be converted
+  * Return: the converted int
+  */
+unsigned int _stoi(char c)
+{
+	return ((unsigned int) c - '0');
+}
+/**
+  * _strlen - this to return the length of the string
+  * @s: help to measures the length
+  * Return: the length of a string
+  */
+unsigned int _strlen(const char *s)
+{
+	unsigned int g;
 
+	for (g = 0; s[g]; g++)
+		;
+	return (g);
+}
+/**
+  * binary_to_uint - this help to convert a string of binary to a decimal number
+  * @b: the string to be converted
+  * Return: an unsigned decimal number
+  */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int marv;
 	int g;
+	unsigned int final, temp, initial;
 
-	if (b == NULL)
+	if (!b)
 		return (0);
-
-	for (g =
+	final = temp = 0;
+	initial = 1;
+	for (g = _strlen(b) - 1; b[g]; g--, initial *= 2)
+	{
+		if (b[g] != '0' && b[g] != '1')
+			return (0);
+		temp = _stoi(b[g]);
+	        final += temp * initial;
+	}
+	return (final);
+}
