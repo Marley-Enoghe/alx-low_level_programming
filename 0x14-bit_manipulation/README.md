@@ -1,1 +1,2 @@
-Solution to bit manipulation problems 
+this is bit manipulation projects
+
