@@ -10,7 +10,7 @@
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-        int j, count = 0;
+        int j, count_er = 0;
         unsigned long int current;
         unsigned long int exclusive = n ^ m;
 
@@ -18,8 +18,8 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
         {
                 current = exclusive >> j;
                 if (current & 1)
-                        count++;
+                        count_er++;
         }
 
-        return (count);
+        return (count_er);
 }
