@@ -11,7 +11,7 @@
  * @index: This is the Index of the node in the list
  * @next: This a Pointer to the next node
  *
- * Description: singly linked list node structure
+ * Description:This is a singly linked list node structure
  */
 typedef struct listint_s
 {
@@ -23,12 +23,12 @@ typedef struct listint_s
 /**
  * struct skiplist_s - Singly linked list with an express lane
  *
- * @n: Integer
- * @index: Index of the node in the list
- * @next: Pointer to the next node
- * @express: Pointer to the next node in the express lane
+ * @n: The Integer
+ * @index: The Index of the node in the list
+ * @next: A Pointer to the next node
+ * @express:A Pointer to the next node in the express lane
  *
- * Description: singly linked list node structure with an express lane
+ * Description:The singly linked list node structure with an express lane
  */
 typedef struct skiplist_s
 {
